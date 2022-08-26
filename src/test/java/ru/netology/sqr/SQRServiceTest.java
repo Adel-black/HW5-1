@@ -1,16 +1,16 @@
+package ru.netology.sqr;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import ru.netology.sqr.SQRService;
+
 
 public class SQRServiceTest {
 
     @Test
     public void shouldCalcExact() {
         SQRService service = new SQRService();
-
-        int expected = 10;
-        int actual = service.calcSqrt(99);
-
+        int expected = 3;
+        int actual = service.calcSqrt(200, 300);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -18,8 +18,8 @@ public class SQRServiceTest {
     public void shouldCalcInexact() {
         SQRService service = new SQRService();
 
-        int expected = 5;
-        int actual = service.calcSqrt(90);
+        int expected = 3;
+        int actual = service.calcSqrt(200, 200);
 
         Assertions.assertEquals(expected, actual);
     }
